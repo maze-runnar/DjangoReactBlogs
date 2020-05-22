@@ -8,6 +8,14 @@ import { withRouter } from "react-router-dom";
 
 const FormItem = Form.Item;
 
+const dark = {
+  background:'#273746',
+  color:'white'
+};
+const light = {
+background:'white', 
+color:'black'
+};
 
 class CustomForm extends React.Component {
   
@@ -55,11 +63,13 @@ class CustomForm extends React.Component {
             )
           }
         >
-          <FormItem label="Title">
-            <Input name="title" placeholder="Put a title here" />
+          <FormItem >
+            <span style = {this.props.darkMode? dark : light }>Title</span>
+            <Input name="title" placeholder="Put a title here" style = {this.props.darkMode? dark : light }/>
           </FormItem>
-          <FormItem label="Content">
-            <Input name="content" placeholder="Enter some content ..." />
+          <FormItem>
+            <span style = {this.props.darkMode? dark : light }>Content</span>
+            <Input name="content" placeholder="Enter some content ..."  style = {this.props.darkMode? dark : light }/>
           </FormItem>
           <FormItem>
             <Button type="primary" htmlType="submit">
