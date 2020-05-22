@@ -57,19 +57,9 @@ class CustomLayout extends React.Component {
                 </Menu>
                </Sider>
               <Layout className="site-layout">
-                <Header className="site-layout-background" style={{ padding: 0 , textAlign:'center', background:'white'}} >
-                  <span style={{fontSize:'30px', fontFamily:'cursive', color:'orange'}}><i>Dark mode</i></span>
-
-                  <Switch defaultChecked onChange={this.onChange} />
-                  <span style={{fontSize:'30px', fontFamily:'cursive', color:'orange'}}><i>light mode</i></span>
-                </Header>
-                  <Content style={{ padding: '0 16px' }}>
-                    <Breadcrumb style={{ margin: '16px 0' }}>
-                    <Breadcrumb.Item><Link to="/">Home</Link></Breadcrumb.Item>
-                    <Breadcrumb.Item><Link to="/">List</Link></Breadcrumb.Item>
-                </Breadcrumb>
                 
-                    <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+                  <Content>
+                    <div style={{ background: '#fff', padding: 10, minHeight: 280 }}>
                         {this.props.children}
                     </div>
                 </Content>
